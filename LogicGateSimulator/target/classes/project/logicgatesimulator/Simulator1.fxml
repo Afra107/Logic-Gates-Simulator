@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="571.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.logicgatesimulator.Controller">
+   <TreeView fx:id="SelectionTree" layoutY="181.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onContextMenuRequested="#selectItem" onMouseClicked="#handleGateSelection" prefHeight="387.0" prefWidth="180.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="206.0">
+      <opaqueInsets>
+         <Insets />
+      </opaqueInsets>
+      <cursor>
+         <Cursor fx:constant="HAND" />
+      </cursor>
+   </TreeView>
+   <Pane fx:id="Pane" layoutX="177.0" prefHeight="480.0" prefWidth="567.0" style="-fx-background-color: #e0ffdc;" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="183.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="28.0">
+      <effect>
+         <DropShadow height="8.89" radius="3.31" width="6.35">
+            <color>
+               <Color red="0.5131579041481018" green="0.5060306787490845" blue="0.5060306787490845" />
+            </color>
+         </DropShadow>
+      </effect>
+      <children>
+         <Label alignment="CENTER" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefHeight="52.0" prefWidth="607.0" text="LOGIC GATES SIMULATOR" textFill="RED">
+            <font>
+               <Font name="System Bold Italic" size="24.0" />
+            </font>
+         </Label>
+      </children></Pane>
+   <AnchorPane layoutX="14.0" layoutY="3.0" prefHeight="175.0" prefWidth="180.0" style="-fx-background-color: #d9fcd4;" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="28.0">
+      <children>
+         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f7e9bc" height="175.0" stroke="#c9c8c8" strokeType="INSIDE" width="180.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fff3de" height="145.0" layoutX="14.0" layoutY="15.0" stroke="#ff0e0e" strokeType="INSIDE" strokeWidth="2.0" width="153.0" />
+         <ImageView fx:id="selectedImageView" fitHeight="60.0" fitWidth="99.0" layoutX="41.0" layoutY="58.0" pickOnBounds="true" />
+      </children>
+   </AnchorPane>
+   <MenuBar layoutX="151.0" layoutY="2.0" prefHeight="28.0" prefWidth="706.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+     <menus>
+       <Menu mnemonicParsing="false" text="File">
+         <items>
+           <MenuItem mnemonicParsing="false" onAction="#clearAll" text="Clear All" />
+               <SeparatorMenuItem mnemonicParsing="false" />
+               <MenuItem mnemonicParsing="false" onAction="#switchToMainScreen" text="Back To Main Menu" />
+         </items>
+       </Menu>
+       <Menu mnemonicParsing="false" text="Help">
+         <items>
+           <MenuItem mnemonicParsing="false" text="Help" />
+               <SeparatorMenuItem mnemonicParsing="false" />
+               <MenuItem mnemonicParsing="false" text="About" />
+         </items>
+       </Menu>
+     </menus>
+   </MenuBar>
+   <AnchorPane layoutX="341.0" layoutY="515.0" prefHeight="60.0" prefWidth="567.0" style="-fx-background-color: #b6fcb1;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="183.0" AnchorPane.rightAnchor="0.0">
+      <children>
+         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="RED" height="20.0" layoutX="10.0" layoutY="1.0" stroke="RED" strokeType="INSIDE" width="20.0" AnchorPane.bottomAnchor="35.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="537.0" AnchorPane.topAnchor="5.0" />
+         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f8ff00" height="20.0" layoutX="302.0" layoutY="7.0" stroke="#fdff00" strokeType="INSIDE" width="20.0" AnchorPane.bottomAnchor="35.0" AnchorPane.leftAnchor="302.0" AnchorPane.rightAnchor="285.0" AnchorPane.topAnchor="5.0" />
+         <Label layoutX="99.0" layoutY="7.0" prefHeight="20.0" prefWidth="110.0" text="HIGH VOLTAGE" AnchorPane.bottomAnchor="35.0" AnchorPane.leftAnchor="99.0" AnchorPane.topAnchor="5.0">
+            <font>
+               <Font name="System Bold Italic" size="14.0" />
+            </font>
+         </Label>
+         <Label layoutX="355.0" layoutY="10.0" prefHeight="20.0" prefWidth="110.0" text="LOW VOLTAGE" AnchorPane.bottomAnchor="35.0" AnchorPane.leftAnchor="355.0" AnchorPane.topAnchor="5.0">
+            <font>
+               <Font name="System Bold Italic" size="14.0" />
+            </font>
+         </Label>
+         <Label layoutX="99.0" layoutY="30.0" prefHeight="20.0" prefWidth="47.0" text="Toggling the switches (i.e. logic toggles) will start simulation of the circuit." AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0">
+            <font>
+               <Font name="System Italic" size="14.0" />
+            </font>
+         </Label>
+      </children>
+   </AnchorPane>
+   <effect>
+      <DropShadow height="29.79" radius="13.6625" width="26.86">
+         <color>
+            <Color red="0.12993420660495758" green="0.2368421107530594" blue="0.02302631549537182" />
+         </color>
+      </DropShadow>
+   </effect>
+</AnchorPane>
